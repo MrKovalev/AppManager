@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">AppManager</string>
+    <string name="menu_installed">Installed</string>
+    <string name="menu_system">System</string>
+    <string name="delete">Delete</string>
+    <string name="clear">Clear</string>
 </resources>
