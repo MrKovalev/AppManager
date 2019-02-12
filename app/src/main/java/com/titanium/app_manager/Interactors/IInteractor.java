@@ -6,5 +6,4 @@ import java.util.List;
 
 public interface IInteractor {
     List<AppInfo> filterApps(int currentList, List<AppInfo> mAppsList);
-    void sortAppsList(List<AppInfo> mAppsList);
 }

@@ -35,20 +35,7 @@ public class AppsInteractor implements IInteractor {
                 }
             }
         }
-        sortAppsList(appList);
 
         return appList;
     }
-
-    @Override
-    public void sortAppsList(List<AppInfo> mAppsList) {
-        Comparator<AppInfo> myComparator = new Comparator<AppInfo>() {
-            public int compare(AppInfo obj1, AppInfo obj2) {
-                return obj1.getTitle().compareToIgnoreCase(obj2.getTitle());
-            }
-        };
-
-        Collections.sort(mAppList, myComparator);
-    }
-
 }

@@ -4,6 +4,7 @@ import android.graphics.Bitmap;
 import android.graphics.drawable.Drawable;
 
 import java.io.Serializable;
+import java.util.Date;
 
 public class AppInfo implements Serializable {
 
@@ -13,12 +14,13 @@ public class AppInfo implements Serializable {
     private String sourceDir;
     private String publicSourceDir;
     private String versionName;
-    private String size;
-    private String dataDir,nativeLibraryDir;
+    private long size;
+    private String dataDir,nativeLibraryDir, sizeToShow;
     private int versionCode;
     private Drawable appIcon;
+    private Date lastModified;
 
-    public AppInfo(boolean isSystem, String title, String packageName, String sourceDir, String publicSourceDir, String versionName, String size, String dataDir, String nativeLibraryDir, int versionCode, Drawable icon) {
+    public AppInfo(boolean isSystem, String title, String packageName, String sourceDir, String publicSourceDir, String versionName, long size, String sizeToShow, String dataDir, String nativeLibraryDir, int versionCode, Drawable icon, Date lastModified) {
         this.isSystem = isSystem;
         this.title = title;
         this.packageName = packageName;
@@ -26,10 +28,12 @@ public class AppInfo implements Serializable {
         this.publicSourceDir = publicSourceDir;
         this.versionName = versionName;
         this.size = size;
+        this.sizeToShow = sizeToShow;
         this.dataDir = dataDir;
         this.nativeLibraryDir = nativeLibraryDir;
         this.versionCode = versionCode;
         this.appIcon = icon;
+        this.lastModified = lastModified;
     }
 
     public boolean isSystem() {
@@ -56,8 +60,12 @@ public class AppInfo implements Serializable {
         return versionName;
     }
 
-    public String getSize() {
+    public long getSize() {
         return size;
+    }
+
+    public String getSizeToShow() {
+        return sizeToShow;
     }
 
     public String getDataDir() {
@@ -76,6 +84,8 @@ public class AppInfo implements Serializable {
         return appIcon;
     }
 
+    public Date getLastModified() { return lastModified; }
+
     @Override
     public int hashCode() {
         return (this.title.hashCode() + this.packageName.hashCode());
@@ -85,9 +95,8 @@ public class AppInfo implements Serializable {
     public boolean equals(Object obj) {
         if (obj instanceof AppInfo){
             AppInfo temp = (AppInfo) obj;
-            if (this.title.equals(temp.title)
-                    && this.packageName.equals(temp.packageName))
-                return true;
+            return this.title.equals(temp.title)
+                    && this.packageName.equals(temp.packageName);
         }
 
         return false;

@@ -1,4 +1,4 @@
-package com.titanium.app_manager.Utils.AppsDownloader;
+package com.titanium.app_manager.Utils;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
@@ -11,13 +11,17 @@ import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
 import android.os.AsyncTask;
 import android.os.Build;
+import android.text.format.DateFormat;
 import android.text.format.Formatter;
 import android.util.Log;
 
 import com.titanium.app_manager.Data.Model.AppInfo;
+import com.titanium.app_manager.R;
 
 import java.io.File;
+
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 public class AppInfoTask extends AsyncTask<Void, Void, List<AppInfo>> {
@@ -40,9 +44,9 @@ public class AppInfoTask extends AsyncTask<Void, Void, List<AppInfo>> {
     }
 
     @Override
-    protected List<AppInfo> doInBackground(Void... voids) {
+    protected List<AppInfo> doInBackground(Void... params) {
         final PackageManager pm = context.getPackageManager();
-        List<AppInfo> apps = new ArrayList<>();
+        List<AppInfo> appList = new ArrayList<>();
         List<ApplicationInfo> packages = pm.getInstalledApplications(PackageManager.GET_META_DATA);
 
         for (ApplicationInfo applicationInfo : packages){
@@ -51,28 +55,36 @@ public class AppInfoTask extends AsyncTask<Void, Void, List<AppInfo>> {
                 packageInfo = pm.getPackageInfo(applicationInfo.packageName,0);
 
                 File file = new File(applicationInfo.publicSourceDir);
-                String size = formateFileSize(context, file.length());
+                long size = file.length();
                 Drawable icon = pm.getApplicationIcon(applicationInfo.packageName);
+                Date lastModified = new Date(packageInfo.lastUpdateTime);
+                int version = 0;
 
-                apps.add(new AppInfo(isSystemPackage(packageInfo)
+                if (android.os.Build.VERSION.SDK_INT >= 28) {
+                    version = (int) packageInfo.getLongVersionCode();
+                } else {
+                    version = packageInfo.versionCode;
+                }
+
+                appList.add(new AppInfo(isSystemPackage(packageInfo)
                         ,applicationLabel(context, applicationInfo)
                         ,applicationInfo.packageName
                         ,applicationInfo.sourceDir
                         ,applicationInfo.publicSourceDir
                         ,packageInfo.versionName
                         ,size
+                        ,formateFileSize(context, size)
                         ,applicationInfo.dataDir
                         ,applicationInfo.nativeLibraryDir
-                        ,packageInfo.versionCode
-                        ,icon));
-
-                Log.d("LOAD", "add el");
+                        ,version
+                        ,icon
+                        ,lastModified));
             } catch (PackageManager.NameNotFoundException e) {
                 e.printStackTrace();
             }
         }
 
-        return apps;
+        return appList;
     }
 
     @Override
