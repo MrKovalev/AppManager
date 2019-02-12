@@ -1,0 +1,25 @@
+<resources>
+    <string name="app_name">App Manager</string>
+    <string name="menu_installed">Installed</string>
+    <string name="menu_system">System</string>
+    <string name="delete">Delete</string>
+    <string name="clear">Clear</string>
+    <string name="loading_text">Loading...</string>
+    <string name="open_drawer">Open navigationDrawer</string>
+    <string name="close_drawer">Close navigationDrawer</string>
+    <string name="searching_hint">Write application name...</string>
+    <string name="home">Home</string>
+    <string name="communicate">Communicate</string>
+    <string name="share">Share</string>
+    <string name="rate_app">Rate app</string>
+    <string name="share_title">Share AppManager</string>
+    <string name="sort_title">Sort by</string>
+    <string name="remove_system_app_text">You need to reboot the device after removing this system app</string>
+    <string name="remove_sys_checkbox">Don\'t show again</string>
+    <string name="root_mess">We need root permisions to uninstall system applications, make sure your device is rooted</string>
+    <string name="root_title">Warning</string>
+    <string name="root_negative_answ">I know</string>
+    <string name="root_positive_answ">Root help</string>
+    <string name="prepare_dialog_ok">Ok</string>
+    <string name="prepare_dialog_no">Cancel</string>
+</resources>
