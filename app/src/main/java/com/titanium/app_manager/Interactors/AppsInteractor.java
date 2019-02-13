@@ -2,12 +2,10 @@ package com.titanium.app_manager.Interactors;
 
 import android.content.Context;
 
-import com.titanium.app_manager.Data.Model.AppInfo;
+import com.titanium.app_manager.Model.AppInfo;
 import com.titanium.app_manager.R;
 
 import java.util.ArrayList;
-import java.util.Collections;
-import java.util.Comparator;
 import java.util.List;
 
 public class AppsInteractor implements IInteractor {

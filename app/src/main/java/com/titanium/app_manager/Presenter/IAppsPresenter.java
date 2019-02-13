@@ -1,9 +1,8 @@
 package com.titanium.app_manager.Presenter;
 
 import android.app.AlertDialog;
-import android.support.v4.app.ShareCompat;
 
-import com.titanium.app_manager.Data.Model.AppInfo;
+import com.titanium.app_manager.Model.AppInfo;
 import com.titanium.app_manager.Utils.AppInfoTask;
 import com.titanium.app_manager.View.IAppsView;
 

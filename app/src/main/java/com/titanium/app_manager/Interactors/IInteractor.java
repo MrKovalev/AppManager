@@ -1,6 +1,6 @@
 package com.titanium.app_manager.Interactors;
 
-import com.titanium.app_manager.Data.Model.AppInfo;
+import com.titanium.app_manager.Model.AppInfo;
 
 import java.util.List;
 

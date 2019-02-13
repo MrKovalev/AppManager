@@ -5,9 +5,8 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.AsyncTask;
-import android.support.v4.app.ShareCompat;
 
-import com.titanium.app_manager.Data.Model.AppInfo;
+import com.titanium.app_manager.Model.AppInfo;
 import com.titanium.app_manager.Interactors.IInteractor;
 import com.titanium.app_manager.R;
 import com.titanium.app_manager.Utils.AppInfoTask;

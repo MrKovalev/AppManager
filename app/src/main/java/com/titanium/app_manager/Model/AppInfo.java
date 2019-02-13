@@ -1,6 +1,5 @@
-package com.titanium.app_manager.Data.Model;
+package com.titanium.app_manager.Model;
 
-import android.graphics.Bitmap;
 import android.graphics.drawable.Drawable;
 
 import java.io.Serializable;
