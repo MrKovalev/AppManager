@@ -1,17 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/item"
     android:orientation="horizontal"
     android:foreground="?android:attr/selectableItemBackground"
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
 
-    <android.support.v7.widget.CardView
-        android:padding="2dp"
-        android:layout_marginTop="2dp"
-        android:layout_marginBottom="4dp"
+    <androidx.cardview.widget.CardView
+        android:padding="12dp"
+        android:layout_margin="8dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
@@ -19,6 +18,7 @@
             android:id="@+id/layout_item"
             android:weightSum="4"
             android:orientation="horizontal"
+            android:padding="8dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
@@ -26,6 +26,7 @@
                 android:id="@+id/icon"
                 android:layout_margin="2dp"
                 android:layout_gravity="center_vertical"
+                tools:src="@tools:sample/avatars"
                 android:layout_width="48dp"
                 android:layout_height="48dp" />
 
@@ -41,15 +42,18 @@
                     android:id="@+id/title"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    tools:text="@tools:sample/lorem"
                     android:textStyle="bold" />
 
                 <TextView
                     android:id="@+id/packageName"
+                    tools:text="@tools:sample/lorem"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content" />
 
                 <TextView
                     android:id="@+id/version"
+                    tools:text="@tools:sample/us_zipcodes"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content" />
             </LinearLayout>
@@ -57,12 +61,13 @@
             <TextView
                 android:layout_weight="1"
                 android:id="@+id/size"
+                tools:text="@tools:sample/us_zipcodes"
                 android:textStyle="bold"
                 android:layout_gravity="bottom"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />
 
-            <android.support.v7.widget.AppCompatCheckBox
+            <CheckBox
                 android:id="@+id/checkBoxSelected"
                 android:theme="@style/CheckBoxTheme"
                 android:layout_weight="1"
@@ -70,8 +75,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_vertical"
-                android:layout_marginEnd="@dimen/nav_bar_header_margin_right" />
+                android:layout_marginEnd="@dimen/nav_bar_header_margin_right"
+                android:layout_marginRight="@dimen/nav_bar_header_margin_right" />
 
         </LinearLayout>
-    </android.support.v7.widget.CardView>
+    </androidx.cardview.widget.CardView>
 </LinearLayout>

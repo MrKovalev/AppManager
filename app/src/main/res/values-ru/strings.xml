@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<string name="app_name">Delete App Helper</string>
+
+	<string name="menu_installed">Установленные</string>
+	<string name="menu_system">Системные</string>
+	<string name="delete">Удалить</string>
+	<string name="clear">Очистить</string>
+
+	<string name="loading_text">Загрузка...</string>
+	<string name="open_drawer">Открыть навигационную панель</string>
+	<string name="close_drawer">Закрыть навигационную панель</string>
+	<string name="searching_hint">Введите название приложения...</string>
+
+	<string name="home">Удаление</string>
+	<string name="share">Поделиться</string>
+	<string name="rate_app">Оценить приложение</string>
+	<string name="privacy_app">Политика конфиденциальности</string>
+	<string name="share_title">Поделиться приложением Delete App Helper</string>
+	<string name="share_message">Позвольте порекоммендовать вам это приложение \n \n</string>
+	<string name="sort_title">Отсортировать по</string>
+	<string name="remove_system_app_text">Вам неободимо перезагрузить устройство после удаления этого системного приложения</string>
+	<string name="remove_sys_checkbox">Не показывать больше</string>
+	<string name="root_mess">Нам необходим root доступ для возможности удаления системных приложений, убедитесь что ваше устройство имеет root доступ</string>
+	<string name="root_title">Предупреждение</string>
+	<string name="root_negative_answ">Я понимаю</string>
+	<string name="root_positive_answ">Помощь по настройке</string>
+	<string name="prepare_dialog_ok">Ок</string>
+	<string name="prepare_dialog_no">Отменить</string>
+
+	<string name="dialog_title_text">Произошла ошибка...</string>
+	<string name="dialog_message_text">Пожалуйста, попробуйте снова</string>
+	<string name="dialog_ok_button_text">Ок</string>
+	<string name="dialog_cancel_button_text">Отменить</string>
+	<string name="dialog_system_delete">Вы действительно хотите удалить это системное приложение?\n\nВам необходимо будет перезагрузить ваше устройство после удаления этого системного приложения</string>
+
+	<string-array name="sort">
+		<item>Названию</item>
+		<item>Последней дате использования</item>
+		<item>Размеру</item>
+	</string-array>
+</resources>

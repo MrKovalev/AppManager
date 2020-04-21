@@ -1,25 +1,40 @@
 <resources>
-    <string name="app_name">App Manager</string>
+    <string name="app_name">Delete App Helper</string>
+
     <string name="menu_installed">Installed</string>
     <string name="menu_system">System</string>
     <string name="delete">Delete</string>
     <string name="clear">Clear</string>
+
     <string name="loading_text">Loading...</string>
     <string name="open_drawer">Open navigationDrawer</string>
     <string name="close_drawer">Close navigationDrawer</string>
     <string name="searching_hint">Write application name...</string>
+
     <string name="home">Home</string>
-    <string name="communicate">Communicate</string>
     <string name="share">Share</string>
     <string name="rate_app">Rate app</string>
-    <string name="share_title">Share AppManager</string>
+    <string name="privacy_app">Privacy policy</string>
+    <string name="share_title">Share app Delete App Helper</string>
+    <string name="share_message">Let me recommend you this application \n \n</string>
     <string name="sort_title">Sort by</string>
     <string name="remove_system_app_text">You need to reboot the device after removing this system app</string>
     <string name="remove_sys_checkbox">Don\'t show again</string>
-    <string name="root_mess">We need root permisions to uninstall system applications, make sure your device is rooted</string>
+    <string name="root_mess">We need root permissions to uninstall system applications, make sure your device is rooted</string>
     <string name="root_title">Warning</string>
     <string name="root_negative_answ">I know</string>
     <string name="root_positive_answ">Root help</string>
-    <string name="prepare_dialog_ok">Ok</string>
+    <string name="prepare_dialog_ok">OK</string>
     <string name="prepare_dialog_no">Cancel</string>
+    <string name="dialog_title_text">Error...</string>
+    <string name="dialog_message_text">Please, try again</string>
+    <string name="dialog_ok_button_text">Ok</string>
+    <string name="dialog_cancel_button_text">Cancel</string>
+    <string name="dialog_system_delete">Do you want to uninstall this system app?\n\nYou need to reboot the device after removing this system app</string>
+
+    <string-array name="sort">
+        <item>Name</item>
+        <item>Last Modified</item>
+        <item>Size</item>
+    </string-array>
 </resources>
